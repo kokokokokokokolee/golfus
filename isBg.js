@@ -7,15 +7,6 @@ document.addEventListener("scroll", ()=>{
     const screenY = window.scrollY;
 
     console.log(screenY);
-    // bgColor.style.backgroundColor = '#fff'
-    // // if(screenY >=1492 && 2124 <= screenY){
-    // //     bgColor.style.backgroundColor = `#f5f6f9`;
-    // //     // bgColor.style.transition = `all 0.3s ease-in-out`
-    // //     }
-    //  if (screenY > 2124){
-    //     bgColor.style.backgroundColor = `#000`;
-        // bgColor.style.transition = `all 0.3s ease-in-out`
-
 
             if (screenY >=1492 && 2124 >= screenY) {
                 bgColor.classList.add("gray");
