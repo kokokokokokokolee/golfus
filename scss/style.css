@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url(../css/font.css);
 @import url(../css/reset.css);
 #wrap {
@@ -22,7 +21,7 @@
 }
 #wrap #header {
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   background: rgba(255, 255, 255, 0.3);
@@ -62,7 +61,6 @@
   cursor: pointer;
 }
 #wrap #header .container .content a h2 strong {
-  margin-left: 5px;
   color: #108d10;
 }
 #wrap #header .container .content ul {
@@ -136,7 +134,7 @@
   align-items: center;
 }
 #wrap #main #section1 .text-container .text-view .text-wrap .txt-box .mainText {
-  padding-top: 350px;
+  padding-top: 230px;
   height: 100vh;
   white-space: pre-line;
   font-size: 80px;
@@ -367,7 +365,6 @@
 }
 #wrap #main #section4 .slide-container .slide-view .slide-wrap .title .main-title h2 strong {
   color: #108d10;
-  margin-left: 10px;
 }
 #wrap #main #section4 .slide-container .slide-view .slide-wrap .content {
   width: 100%;
@@ -445,11 +442,11 @@
 #wrap #main #section4 .slide-container .slide-view .slide-wrap .content .page-box .num i {
   margin: 0 5px;
 }
-#wrap #main #section4 .slide-container .slide-view .slide-wrap .content .page-box .num .arrow-prev {
+#wrap #main #section4 .slide-container .slide-view .slide-wrap .content .page-box .num .arrow-next {
   cursor: pointer;
   margin-right: 10px;
 }
-#wrap #main #section4 .slide-container .slide-view .slide-wrap .content .page-box .num .arrow-prev::after {
+#wrap #main #section4 .slide-container .slide-view .slide-wrap .content .page-box .num .arrow-next::after {
   content: "<";
   font-size: 40px;
   font-weight: 300;
@@ -472,49 +469,113 @@
   height: 100vh;
   background-color: #000;
 }
-#wrap #main #sub1 .container {
+#wrap #main #sub1 .section1 .container {
   width: 1300px;
   height: 100vh;
   margin: 0 auto;
 }
-#wrap #main #sub1 .container .content {
+#wrap #main #sub1 .section1 .container .content {
   display: flex;
   align-items: center;
   height: 100%;
 }
-#wrap #main #sub1 .container .content .txt-box {
+#wrap #main #sub1 .section1 .container .content .txt-box {
   color: #fff;
 }
-#wrap #main #sub1 .container .content .txt-box h4 {
+#wrap #main #sub1 .section1 .container .content .txt-box h4 {
   font-size: 22px;
   margin-bottom: 30px;
 }
-#wrap #main #sub1 .container .content .txt-box h4 strong {
+#wrap #main #sub1 .section1 .container .content .txt-box h4 strong {
   color: #108d10;
 }
-#wrap #main #sub1 .container .content .txt-box h2 {
+#wrap #main #sub1 .section1 .container .content .txt-box h2 {
   font-size: 80px;
 }
 #wrap #main #sub2 {
   width: 100%;
   height: 100vh;
 }
-#wrap #main #sub2 .container {
+#wrap #main #sub2 .section1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrap #main #sub2 .section1 .calender {
+  width: 500px;
+  height: 50px;
+}
+#wrap #main #sub2 .section1 .calender .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#wrap #main #sub2 .section1 .calender .header .year-month {
+  font-size: 35px;
+}
+#wrap #main #sub2 .section1 .calender .header .nav {
+  display: flex;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+#wrap #main #sub2 .section1 .calender .header .nav .nav-btn {
+  width: 20px;
+  height: 30px;
+  border: none;
+  font-size: 16px;
+  line-height: 34px;
+  background-color: transparent;
+  cursor: pointer;
+}
+#wrap #main #sub2 .section1 .calender .header .nav .nav-btn.go-today {
+  width: 75px;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+}
+#wrap #main #sub2 .section1 .calender .main .days {
+  display: flex;
+  margin: 25px 0 10px;
+}
+#wrap #main #sub2 .section1 .calender .main .days .day {
+  width: 14.2857142857%;
+  text-align: center;
+}
+#wrap #main #sub2 .section1 .calender .main .days .day.day:nth-child(7n+1), #wrap #main #sub2 .section1 .calender .main .days .day.date:nth-child(7n+1) {
+  color: #d13e3e;
+}
+#wrap #main #sub2 .section1 .calender .main .days .day.day:nth-child(7n), #wrap #main #sub2 .section1 .calender .main .days .day.date:nth-child(7n) {
+  color: #396ee2;
+}
+#wrap #main #sub2 .section1 .calender .main .dates {
+  display: flex;
+  flex-flow: wrap;
+  height: 500px;
+  border-top: 1px solid #333;
+  border-right: 1px solid #333;
+}
+#wrap #main #sub2 .section1 .calender .main .dates .date {
+  width: 14.2857142857%;
+  padding: 15px;
+  text-align: right;
+  border-bottom: 1px solid #333;
+  border-left: 1px solid #333;
+}
+#wrap #main #sub2 .map .container {
   width: 1300px;
   margin: 0 auto;
   height: 100vh;
 }
-#wrap #main #sub2 .container .content {
+#wrap #main #sub2 .map .container .content {
   width: 100%;
   display: flex;
   align-items: center;
   height: 100%;
 }
-#wrap #main #sub2 .container .content .map-box {
+#wrap #main #sub2 .map .container .content .map-box {
   width: 100%;
   height: 500px;
 }
-#wrap #main #sub2 .container .content .map-box iframe {
+#wrap #main #sub2 .map .container .content .map-box iframe {
   width: 100%;
   height: 100%;
   border: 0;
@@ -586,68 +647,4 @@
 }
 #wrap #footer .container .content .sns-box a img {
   margin: 0 5px;
-}
-#wrap #reserve {
-  width: 100px;
-  height: 100px;
-  position: fixed;
-  left: 90%;
-  bottom: 5%;
-  cursor: pointer;
-  transition: all 0.3s;
-  animation: reserveAni 1s infinite linear;
-}
-@keyframes reserveAni {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-#wrap #reserve.black.mouseover {
-  animation: none;
-}
-#wrap #reserve.black.mouseover::before {
-  content: "예약하기";
-  position: absolute;
-  top: -27%;
-  right: 12%;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600;
-}
-#wrap #reserve.white.mouseover {
-  animation: none;
-}
-#wrap #reserve.white.mouseover::before {
-  content: "예약하기";
-  position: absolute;
-  top: -27%;
-  right: 12%;
-  color: #000;
-  font-size: 20px;
-  font-weight: 600;
-}
-#wrap #reserve .container .content {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-#wrap #reserve .container .content .img-box img {
-  width: 100px;
-  height: 100px;
-}
-#wrap #reserve .container .content .content-txt {
-  width: 100%;
-}
-#wrap #reserve .container .content .content-txt h3 {
-  text-align: center;
-  color: #fff;
-  font-weight: 500;
-  font-size: 28px;
 }/*# sourceMappingURL=style.css.map */

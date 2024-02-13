@@ -24,13 +24,29 @@
         </div>
 
     </div>
-    <!-- <script src="./js/isbg.js"></script> -->
     <div id="main">
-        <div id='sub2'>
-            <div class="container">
-                <div class="content">
-                    <div class="map-box">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.2659642572958!2d2.161473476791803!3d41.39003009583018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4067b942af0275dd%3A0x94800aa00ab5aa6c!2z67mE64uI7Yis7Iqk!5e0!3m2!1sko!2skr!4v1701926408420!5m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div id="sub2">
+            <div class="section1">
+                <div class="calender">
+                    <div class="header">
+                        <div class="year-month"></div>
+                        <div class="nav">
+                            <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+                            <button class="nav-btn go-today" onclick="goToday()">Today</button>
+                            <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+                        </div>
+                    </div>
+                    <div class="main">
+                        <div class="days">
+                            <div class="day">일</div>
+                            <div class="day">월</div>
+                            <div class="day">화</div>
+                            <div class="day">수</div>
+                            <div class="day">목</div>
+                            <div class="day">금</div>
+                            <div class="day">토</div>
+                        </div>
+                        <div class="dates"></div>
                     </div>
                 </div>
             </div>
@@ -85,7 +101,7 @@
           </div>
       </div>
     
-      <div id='reserve'>
+      <!-- <div id='reserve'>
         <div class="container">
             <div class="content">
                 <div class="img-box">
@@ -97,8 +113,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
   </div>
+  <!-- <script src="./js/isbg.js"></script> -->
+  <script src="./calendar.js"></script>
 </body>
 </html>
 

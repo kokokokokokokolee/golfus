@@ -27,7 +27,7 @@
     }
     #header {
         width: 100%;
-        position: fixed;
+        position: sticky;
         top: 0;
         left: 0;
         background: rgba(255, 255, 255, 0.3);
@@ -61,7 +61,6 @@
                     h2 {
                         cursor: pointer;
                         strong {
-                            margin-left: 5px;
                             color: #108d10;
                         }
                     }
@@ -136,7 +135,7 @@
                             display: flex;
                             align-items: center;
                             .mainText {
-                                padding-top: 350px;
+                                padding-top: 230px;
                                 height: 100vh;
                                 white-space: pre-line;
                                 font-size: 80px;
@@ -387,7 +386,6 @@
                                     line-height: 140%;
                                     strong {
                                         color: #108d10;
-                                        margin-left: 10px;
                                     }
                                 }
                             }
@@ -476,7 +474,7 @@
                                     i {
                                         margin: 0 5px;
                                     }
-                                    .arrow-prev {
+                                    .arrow-next {
                                         cursor: pointer;
                                         margin-right: 10px;
                                         &::after {
@@ -510,29 +508,31 @@
             width: 100%;
             height: 100vh;
             background-color: #000;
-            .container {
-                width: 1300px;
-                height: 100vh;
-                margin: 0 auto;
-                .content {
-                    display: flex;
-                    align-items: center;
-                    height: 100%;
-                    .txt-box {
-                        color: #fff;
-                        h4 {
-                            font-size: 22px;
-                            margin-bottom: 30px;
-                            strong {
-                                color: #108d10;
+            .section1 {
+                .container {
+                    width: 1300px;
+                    height: 100vh;
+                    margin: 0 auto;
+                    .content {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        .txt-box {
+                            color: #fff;
+                            h4 {
+                                font-size: 22px;
+                                margin-bottom: 30px;
+                                strong {
+                                    color: #108d10;
+                                }
+                            }
+                            h2 {
+                                font-size: 80px;
                             }
                         }
-                        h2 {
-                            font-size: 80px;
+                        .img-box {
+                            img {}
                         }
-                    }
-                    .img-box {
-                        img {}
                     }
                 }
             }
@@ -540,22 +540,94 @@
         #sub2 {
             width: 100%;
             height: 100vh;
-            .container {
-                width: 1300px;
-                margin: 0 auto;
-                height: 100vh;
-                .content {
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    height: 100%;
-                    .map-box {
+            .section1 {
+                display: flex;
+                align-items: center;
+                justify-content: center; 
+                .calender {
+                    width: 500px;
+                    height: 50px;
+                    .header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .year-month {
+                            font-size: 35px;
+                        }
+                        .nav {
+                            display: flex;
+                            border:1px solid #333;
+                            border-radius: 5px;
+                            .nav-btn {
+                                width: 20px;
+                                height: 30px;
+                                border: none;
+                                font-size: 16px;
+                                line-height: 34px;
+                                background-color: transparent;
+                                cursor: pointer;
+                                &.go-prev {}
+                                &.go-today {
+                                    width: 75px;
+                                    border-left: 1px solid #333;
+                                    border-right: 1px solid #333;
+                                }
+                                &.go-next {}
+                            }
+                        }
+                    }
+                    .main {
+                        .days {
+                            display: flex;
+                            margin: 25px 0 10px;
+                            .day {
+                                width: calc(100% /7);
+                                text-align: center;
+                                &.day:nth-child(7n + 1),
+                                &.date:nth-child(7n +1) {
+                                    color: #d13e3e;
+                                }
+                                &.day:nth-child(7n),
+                                &.date:nth-child(7n) {
+                                    color: #396ee2; 
+                                }
+                            } 
+                        }
+                        .dates {
+                            display: flex;
+                            flex-flow: wrap;
+                            height: 500px;
+                            border-top: 1px solid #333;
+                            border-right: 1px solid #333;
+                            .date {
+                                width: calc(100% / 7);
+                                padding: 15px;
+                                text-align: right;
+                                border-bottom: 1px solid #333;
+                                border-left: 1px solid #333;
+                            }
+                        }
+                    }
+                }
+            }
+            .map {
+                .container {
+                    width: 1300px;
+                    margin: 0 auto;
+                    height: 100vh;
+                    .content {
                         width: 100%;
-                        height: 500px;
-                        iframe {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        .map-box {
                             width: 100%;
-                            height: 100%;
-                            border: 0   ;
+                            height: 500px;
+                            iframe {
+                                width: 100%;
+                                height: 100%;
+                                border: 0   ;
+                            }
                         }
                     }
                 }
@@ -647,84 +719,84 @@
             }
         }
     }
-    #reserve {
-        width: 100px;
-        height: 100px;
-        position: fixed;
-        left: 90%;
-        bottom: 5%;
-        cursor: pointer;
-        transition: all 0.3s;
-        animation: reserveAni 1s infinite linear;
-        @keyframes reserveAni {
-             0%   {
-                transform: translateY(0px);
-             }
-             50%  {
-                transform: translateY(-10px);
-             }
-             100% {
-                transform: translateY(0px);
-                }
-        }
-        &.black {
-            &.mouseover {
-                animation:none;
-                &::before {
-                    content: '예약하기';
-                    position: absolute;
-                    top: -27%;
-                    right: 12%;
-                    color: #fff;
-                    font-size: 20px;
-                    font-weight: 600;
-                }
-            }
-        }
-        &.white {
-            &.mouseover {
-                animation:none;
-                &::before {
-                    content: '예약하기';
-                    position: absolute;
-                    top: -27%;
-                    right: 12%;
-                    color: #000;
-                    font-size: 20px;
-                    font-weight: 600;
-                }
-            }
-        }
-        .container {
-            // width: 50px;
-            // height: 50px;
-            // background-color: #108d10;
-            // border-radius: 30px;
-            // display: flex;
-            // align-items: center;
-            // animation: reserveOff 0.5s ease-in-out; 
-            .content {
-                display: flex;
-                width: 100%;
-                align-items: center;
-                justify-content: center;
-                .img-box {
-                    img {
-                        width: 100px;
-                        height: 100px;
+    // #reserve {
+    //     width: 100px;
+    //     height: 100px;
+    //     position: fixed;
+    //     left: 90%;
+    //     bottom: 5%;
+    //     cursor: pointer;
+    //     // transition: all 0.3s;
+    //     // animation: reserveAni 0.01s infinite linear;
+    //     // @keyframes reserveAni {
+    //     //      0%   {
+    //     //         transform: translateY(0px);
+    //     //      }
+    //     //      50%  {
+    //     //         transform: translateY(-15px);
+    //     //      }
+    //     //      100% {
+    //     //         transform: translateY(0px);
+    //     //         }
+    //     // }
+    //     // &.black {
+    //     //     &.mouseover {
+    //     //         animation:none;
+    //     //         &::before {
+    //     //             content: '시작하기';
+    //     //             position: absolute;
+    //     //             top: -27%;
+    //     //             right: 12%;
+    //     //             color: #fff;
+    //     //             font-size: 20px;
+    //     //             font-weight: 600;
+    //     //         }
+    //     //     }
+    //     // }
+    //     // &.white {
+    //     //     &.mouseover {
+    //     //         animation:none;
+    //     //         &::before {
+    //     //             content: '시작하기';
+    //     //             position: absolute;
+    //     //             top: -27%;
+    //     //             right: 12%;
+    //     //             color: #000;
+    //     //             font-size: 20px;
+    //     //             font-weight: 600;
+    //     //         }
+    //     //     }
+    //     // }
+    //     .container {
+    //         // width: 50px;
+    //         // height: 50px;
+    //         // background-color: #108d10;
+    //         // border-radius: 30px;
+    //         // display: flex;
+    //         // align-items: center;
+    //         // animation: reserveOff 0.5s ease-in-out; 
+    //         .content {
+    //             display: flex;
+    //             width: 100%;
+    //             align-items: center;
+    //             justify-content: center;
+    //             .img-box {
+    //                 img {
+    //                     width: 100px;
+    //                     height: 100px;
                         
-                    }
-                }
-                .content-txt {
-                    width: 100%;
-                    h3 {
-                        text-align: center;
-                        color: #fff;
-                        font-weight: 500;
-                        font-size: 28px;
-                    }
-                }
-            }
-        }
-    }
+    //                 }
+    //             }
+    //             .content-txt {
+    //                 width: 100%;
+    //                 h3 {
+    //                     text-align: center;
+    //                     color: #fff;
+    //                     font-weight: 500;
+    //                     font-size: 28px;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
