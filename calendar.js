@@ -35,8 +35,13 @@ const renderCalendar = ( )=> {
     }
 
     const dates = prevDates.concat(thisDates, nextDates);
+    // const firstDateIndex = dates.index(1);
+    // const lastDateIndex = dates.lastIndexOf(TLDate)
 
     dates.forEach((date, i) => {
+        // const condition = i > firstDateIndex && i < lastDateIndex
+        //                 ? 'this'
+        //                 : 'other'
         dates[i] = `<div class="date">${date}</div>`
     })
 
