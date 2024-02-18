@@ -560,6 +560,15 @@
   border-bottom: 1px solid #333;
   border-left: 1px solid #333;
 }
+#wrap #main #sub2 .section1 .calender .main .dates .date.date:nth-child(7n+1) {
+  color: #d13e3e;
+}
+#wrap #main #sub2 .section1 .calender .main .dates .date.date:nth-child(7n) {
+  color: #396ee2;
+}
+#wrap #main #sub2 .section1 .calender .main .dates .date .other {
+  opacity: 0.2;
+}
 #wrap #main #sub2 .map .container {
   width: 1300px;
   margin: 0 auto;

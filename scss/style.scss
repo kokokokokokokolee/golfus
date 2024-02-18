@@ -603,15 +603,15 @@
                                 text-align: right;
                                 border-bottom: 1px solid #333;
                                 border-left: 1px solid #333;
-                                // &.date:nth-child(7n +1) {
-                                //     color: #d13e3e;
-                                // }
-                                // &.date:nth-child(7n) {
-                                //     color: #396ee2;
-                                // }
-                                // .other {
-                                //     opacity: 0.2;
-                                // }
+                                &.date:nth-child(7n +1) {
+                                    color: #d13e3e;
+                                }
+                                &.date:nth-child(7n) {
+                                    color: #396ee2;
+                                }
+                                .other {
+                                    opacity: 0.2;
+                                }
                             }
                         }
                     }
