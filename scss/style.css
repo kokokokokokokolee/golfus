@@ -540,10 +540,10 @@
   width: 14.2857142857%;
   text-align: center;
 }
-#wrap #main #sub2 .section1 .calender .main .days .day.day:nth-child(7n+1), #wrap #main #sub2 .section1 .calender .main .days .day.date:nth-child(7n+1) {
+#wrap #main #sub2 .section1 .calender .main .days .day.day:nth-child(7n+1) {
   color: #d13e3e;
 }
-#wrap #main #sub2 .section1 .calender .main .days .day.day:nth-child(7n), #wrap #main #sub2 .section1 .calender .main .days .day.date:nth-child(7n) {
+#wrap #main #sub2 .section1 .calender .main .days .day.day:nth-child(7n) {
   color: #396ee2;
 }
 #wrap #main #sub2 .section1 .calender .main .dates {
