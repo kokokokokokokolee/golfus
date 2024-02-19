@@ -615,7 +615,9 @@
                                 .today {
                                     position: relative;
                                     color: #fff;
-                                    &::after {
+                                    z-index: 1;
+                                    &::before {
+                                        content: '';
                                         position: absolute;
                                         top: 50%;
                                         left: 50%;
@@ -626,7 +628,6 @@
                                         display: block;
                                         background-color: #FF0000;
                                         border-radius: 50%;
-                                        content: '';
                                     }
                                 }
                             }
