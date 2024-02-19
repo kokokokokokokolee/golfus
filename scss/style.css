@@ -239,19 +239,19 @@
   font-weight: 400;
   line-height: 180%;
 }
-#wrap #main #section3 {
+#wrap #main #sectio n3 {
   width: 100%;
 }
-#wrap #main #section3 .slide-container {
+#wrap #main #sectio n3 .slide-container {
   position: relative;
   top: 0;
   width: 1300px;
   margin: 0 auto;
 }
-#wrap #main #section3 .slide-container .slide-view {
+#wrap #main #sectio n3 .slide-container .slide-view {
   height: 100%;
 }
-#wrap #main #section3 .slide-container .slide-view .slide-wrap {
+#wrap #main #sectio n3 .slide-container .slide-view .slide-wrap {
   margin-left: -27vw;
   margin-right: -13.4vw;
   padding-left: 27vw;
@@ -259,20 +259,20 @@
   position: relative;
   transition: all 0.7s ease-in-out;
 }
-#wrap #main #section3 .slide-container .slide-view .slide-wrap .title {
+#wrap #main #sectio n3 .slide-container .slide-view .slide-wrap .title {
   padding: 160px 0 80px 0;
 }
-#wrap #main #section3 .slide-container .slide-view .slide-wrap .title h4 {
+#wrap #main #sectio n3 .slide-container .slide-view .slide-wrap .title h4 {
   font-size: 22px;
   margin-bottom: 35px;
   font-weight: 800;
 }
-#wrap #main #section3 .slide-container .slide-view .slide-wrap .title h2 {
+#wrap #main #sectio n3 .slide-container .slide-view .slide-wrap .title h2 {
   font-size: 48px;
   font-weight: 700;
   line-height: 140%;
 }
-#wrap #main #section3 .slide-container .slide-view .slide-wrap .text-slide {
+#wrap #main #sectio n3 .slide-container .slide-view .slide-wrap .text-slide {
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -283,13 +283,13 @@
   padding-right: 27vw;
   box-sizing: border-box;
 }
-#wrap #main #section3 .slide-container .slide-view .slide-wrap .text-slide ul {
+#wrap #main #sectio n3 .slide-container .slide-view .slide-wrap .text-slide ul {
   display: flex;
 }
-#wrap #main #section3 .slide-container .slide-view .slide-wrap .text-slide ul li {
+#wrap #main #sectio n3 .slide-container .slide-view .slide-wrap .text-slide ul li {
   margin-right: 30px;
 }
-#wrap #main #section3 .slide-container .slide-view .slide-wrap .text-slide ul li .content {
+#wrap #main #sectio n3 .slide-container .slide-view .slide-wrap .text-slide ul li .content {
   width: 406px;
   height: 500px;
   border: none;
@@ -298,20 +298,20 @@
   padding: 40px;
   position: relative;
 }
-#wrap #main #section3 .slide-container .slide-view .slide-wrap .text-slide ul li .content .text-box h2 {
+#wrap #main #sectio n3 .slide-container .slide-view .slide-wrap .text-slide ul li .content .text-box h2 {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 30px;
   color: #000;
 }
-#wrap #main #section3 .slide-container .slide-view .slide-wrap .text-slide ul li .content .text-box h3 {
+#wrap #main #sectio n3 .slide-container .slide-view .slide-wrap .text-slide ul li .content .text-box h3 {
   font-size: 16px;
   color: #555;
   margin-bottom: 20px;
   font-weight: 400;
   line-height: 180%;
 }
-#wrap #main #section3 .slide-container .slide-view .slide-wrap .text-slide ul li .content .img-box {
+#wrap #main #sectio n3 .slide-container .slide-view .slide-wrap .text-slide ul li .content .img-box {
   border: 0.5px solid #000;
   border-radius: 50%;
   padding: 10px;
@@ -321,17 +321,17 @@
   align-items: center;
   justify-content: center;
 }
-#wrap #main #section3 .slide-container .slide-view .slide-wrap .text-slide ul li .content .img-box img {
+#wrap #main #sectio n3 .slide-container .slide-view .slide-wrap .text-slide ul li .content .img-box img {
   transform: rotate(-45deg);
   width: 14px;
   height: 14px;
 }
-#wrap #main #section3 .slide-container .slide-view .slide-wrap .text-slide ul li .content .icon-box {
+#wrap #main #sectio n3 .slide-container .slide-view .slide-wrap .text-slide ul li .content .icon-box {
   position: absolute;
   right: 20px;
   bottom: 20px;
 }
-#wrap #main #section3 .slide-container .slide-view .slide-wrap .text-slide ul li .content .icon-box img {
+#wrap #main #sectio n3 .slide-container .slide-view .slide-wrap .text-slide ul li .content .icon-box img {
   width: 200px;
 }
 #wrap #main #section4 {
@@ -568,6 +568,23 @@
 }
 #wrap #main #sub2 .section1 .calender .main .dates .date .other {
   opacity: 0.2;
+}
+#wrap #main #sub2 .section1 .calender .main .dates .date .today {
+  position: relative;
+  color: #fff;
+}
+#wrap #main #sub2 .section1 .calender .main .dates .date .today::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-color: #FF0000;
+  border-radius: 50%;
+  content: "";
 }
 #wrap #main #sub2 .map .container {
   width: 1300px;

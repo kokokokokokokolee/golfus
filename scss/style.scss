@@ -250,7 +250,7 @@
                 }
             }
         }
-        #section3 {
+        #sectio n3 {
             width: 100%;
             // &.on {
             //     background-color: #f5f6f9;
@@ -611,6 +611,23 @@
                                 }
                                 .other {
                                     opacity: 0.2;
+                                }
+                                .today {
+                                    position: relative;
+                                    color: #fff;
+                                    &::before {
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        z-index: -1;
+                                        width: 30px;
+                                        height: 30px;
+                                        display: block;
+                                        background-color: #FF0000;
+                                        border-radius: 50%;
+                                        content: '';
+                                    }
                                 }
                             }
                         }
